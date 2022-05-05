@@ -30,20 +30,20 @@ class _InicioState extends State <Inicio>{
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.purple,
-        title: const Center (
-        child: Image(
-          image: AssetImage("../Img/EDA2.png"),
-          width: 100,
-          height: 100,
+        appBar: AppBar(
+          backgroundColor: Colors.purple,
+          title: const Center (
+            child: Image(
+              image: AssetImage("../Img/EDA2.png"),
+              width: 100,
+              height: 100,
             ),
+          ),
         ),
-      ),
-      body: Container(
-        child: _campos(),
+        body: Container(
+          child: _campos(),
 
-      )
+        )
 
 
     );
@@ -57,7 +57,7 @@ Widget cuerpo(){
     children: <Widget>[
       Container(
         child: const Center(
-            child: Text("Formulario de Registro"),
+          child: Text("Formulario de Registro"),
         ),
       )
     ],
@@ -77,9 +77,9 @@ class _campos extends StatelessWidget {
           children: <Widget>[
             TextFormField(
               decoration: const InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                )
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  )
               ),
             ),
           ],
