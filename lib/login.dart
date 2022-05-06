@@ -44,10 +44,8 @@ Widget cuerpo(){
           children: <Widget>[
             nombre(),
             SizedBox(height: 50),
-            campoNombre(),
-            campoCorreo(),
+            campoUsuario(),
             campoContrasena(),
-
             SizedBox(height: 50),
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -64,27 +62,10 @@ Widget cuerpo(){
 }
 
 Widget nombre(){
-  return Text("Registrarse", style: const TextStyle(color: Color(0xff9d00d1), fontSize: 45.0, fontWeight: FontWeight.w700));
+  return Text("Iniciar sesión", style: TextStyle(color: Color(0xff9d00d1), fontSize: 45.0, fontWeight: FontWeight.w700));
 }
 
-Widget campoNombre(){
-  return Container(
-    padding: EdgeInsets.symmetric(horizontal: 250, vertical: 5),
-    child: TextField(
-      decoration: InputDecoration(
-        enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(25.0),
-            borderSide: BorderSide(color: Color(0xff9d00d1))
-        ),
-        hintText: "Nombre Completo",
-        fillColor: Color(0xFFFEF2),
-        filled: true,
-      ),
-    ),
-  );
-}
-
-Widget campoCorreo(){
+Widget campoUsuario(){
   return Container(
     padding: EdgeInsets.symmetric(horizontal: 250, vertical: 5),
     child: TextField(
