@@ -85,6 +85,7 @@ Widget botonRegistrarse(){
   );
 }
 
+
 Widget textos(){
   return Container(
       width: 700,
