@@ -87,25 +87,25 @@ Widget botonRegistrarse(){
 
 Widget textos(){
   return Container(
-    width: 700,
-    height: 350,
-    decoration: BoxDecoration(
-      border: Border.all(color: Color(0xff9d00d1), width: 3),
-      borderRadius: BorderRadius.circular(40.0),
-    ),
-    child: text()
+      width: 700,
+      height: 350,
+      decoration: BoxDecoration(
+        border: Border.all(color: Color(0xff9d00d1), width: 3),
+        borderRadius: BorderRadius.circular(40.0),
+      ),
+      child: text()
   );
 }
 
 Widget text(){
   return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text("Bienvenido a EDA", style: TextStyle(color: Colors.black, fontSize: 45.0, fontWeight: FontWeight.bold)),
-        SizedBox(
-          height: 25,
-        ),
-        Text("¡Estamos muy entusiasmados con \n   tu visita! Solo basta un clic para \n   comenzar a construir una mejor \n             versión de ti mismo. \n\n        ¿Por dónde empezamos?", style: TextStyle(color: Colors.black, fontSize: 30.0),),
-      ],
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      Text("Bienvenido a EDA", style: TextStyle(color: Colors.black, fontSize: 45.0, fontWeight: FontWeight.bold)),
+      SizedBox(
+        height: 25,
+      ),
+      Text("¡Estamos muy entusiasmados con \n   tu visita! Solo basta un clic para \n   comenzar a construir una mejor \n             versión de ti mismo. \n\n        ¿Por dónde empezamos?", style: TextStyle(color: Colors.black, fontSize: 30.0),),
+    ],
   );
 }
