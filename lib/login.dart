@@ -1,29 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MiApp());
-}
-
-class MiApp extends StatelessWidget {
-  const MiApp({Key? key}) : super(key: key);
+class Login extends StatefulWidget {
+  Login({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Mi App",
-      home: Inicio(),
-    );
-  }
+  _LoginState createState() => _LoginState();
 }
 
-class Inicio extends StatefulWidget {
-  Inicio({Key? key}) : super(key: key);
-
-  @override
-  _InicioState createState() => _InicioState();
-}
-
-class _InicioState extends State<Inicio> {
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

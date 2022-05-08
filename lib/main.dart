@@ -1,4 +1,6 @@
+import 'package:eda/login.dart';
 import 'package:flutter/material.dart';
+import 'package:eda/Register.dart';
 
 void main() {
   runApp(MiApp());
@@ -39,13 +41,50 @@ class _InicioState extends State<Inicio> {
         ),
         backgroundColor: Color(0xFFFEF2),
         body: Container(
-            child: cuerpo()
+            child: Container(
+              child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      textos(),
+                      SizedBox(height: 50),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                          FlatButton(
+                            color: Color(0xff9d00d1),
+                            padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                            onPressed: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Login())
+                            );}, child: Text("Iniciar sesión", style: TextStyle(fontSize: 20, color: Colors.white),),
+                            shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
+                            ),
+                            SizedBox(width: 60),
+                            FlatButton(
+                            color: Color(0xFFFEF2),
+                            padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                            onPressed: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => Register())
+                              );
+                            }, child: Text("Registrarse", style: TextStyle(fontSize: 20, color: Color(0xff9d00d1)),),
+                            shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
+                            )
+                          ]
+                      )
+                    ],
+                  )
+              ),
+            )
         )
     );
   }
 }
 
-Widget cuerpo(){
+/*Widget cuerpo(){
   return Container(
     child: Center(
         child: Column(
@@ -65,25 +104,27 @@ Widget cuerpo(){
         )
     ),
   );
-}
+}*/
 
-Widget botonIniciarSesion(){
+/*Widget botonIniciarSesion(){
   return FlatButton(
       color: Color(0xff9d00d1),
       padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
-      onPressed: (){}, child: Text("Iniciar sesión", style: TextStyle(fontSize: 20, color: Colors.white),),
+      onPressed: (){
+        Navigator.push(context, route)
+      }, child: Text("Iniciar sesión", style: TextStyle(fontSize: 20, color: Colors.white),),
       shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
   );
-}
+}*/
 
-Widget botonRegistrarse(){
+/*Widget botonRegistrarse(){
   return FlatButton(
     color: Color(0xFFFEF2),
     padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
     onPressed: (){}, child: Text("Registrarse", style: TextStyle(fontSize: 20, color: Color(0xff9d00d1)),),
     shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
   );
-}
+}*/
 
 Widget textos(){
   return Container(

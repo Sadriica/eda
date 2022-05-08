@@ -1,42 +1,50 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MiApp());
-}
 
-class MiApp extends StatelessWidget {
-  const MiApp({Key? key}) : super(key: key);
+class Register extends StatefulWidget {
+  Register({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Mi App",
-      home: Inicio(),
-    );
-  }
+  _RegisterState createState() => _RegisterState();
 }
 
-class Inicio extends StatefulWidget {
-  Inicio({Key? key}) : super(key: key);
-
-  @override
-  _InicioState createState() => _InicioState();
-}
-
-class _InicioState extends State<Inicio> {
+class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
         backgroundColor: Color(0xFFFEF2),
         body: Container(
-            child: cuerpo()
+            child: Container(
+              child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      nombre(),
+                      SizedBox(height: 50),
+                      campoNombre(),
+                      campoCorreo(),
+                      campoContrasena(),
+
+                      SizedBox(height: 50),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            botonEntrar(),
+                            SizedBox(width: 60),
+                            botonCancelar()
+                          ]
+                      )
+                    ],
+                  )
+              ),
+            )
         )
     );
   }
 }
 
-Widget cuerpo(){
+/*Widget cuerpo(){
   return Container(
     child: Center(
         child: Column(
@@ -61,7 +69,7 @@ Widget cuerpo(){
         )
     ),
   );
-}
+}*/
 
 Widget nombre(){
   return Text("Registrarse", style: const TextStyle(color: Color(0xff9d00d1), fontSize: 45.0, fontWeight: FontWeight.w700));
