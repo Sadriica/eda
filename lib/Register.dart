@@ -1,3 +1,5 @@
+import 'package:eda/main.dart';
+import 'package:eda/principalpage.dart';
 import 'package:flutter/material.dart';
 
 
@@ -30,9 +32,30 @@ class _RegisterState extends State<Register> {
                       Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            botonEntrar(),
+                      FlatButton(
+                      color: Color(0xff9d00d1),
+                      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                      onPressed: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => PrincipalPage())
+                        );
+                      }, child: Text("Enviar", style: TextStyle(fontSize: 20, color: Colors.white),),
+                      shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
+                      ),
                             SizedBox(width: 60),
-                            botonCancelar()
+                      FlatButton(
+                      color: Color(0xFFFEF2),
+                      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                      onPressed: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Inicio()
+                            )
+                        );
+                      }, child: Text("Cancelar", style: TextStyle(fontSize: 20, color: Color(0xff9d00d1)),),
+                      shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
+                      )
                           ]
                       )
                     ],
@@ -127,7 +150,7 @@ Widget campoContrasena(){
   );
 }
 
-Widget botonEntrar(){
+/*Widget botonEntrar(){
   return FlatButton(
       color: Color(0xff9d00d1),
       padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
@@ -143,4 +166,4 @@ Widget botonCancelar(){
     onPressed: (){}, child: Text("Cancelar", style: TextStyle(fontSize: 20, color: Color(0xff9d00d1)),),
     shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
   );
-}
+} */

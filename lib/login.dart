@@ -1,3 +1,5 @@
+import 'package:eda/main.dart';
+import 'package:eda/principalpage.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -14,13 +16,52 @@ class _LoginState extends State<Login> {
 
         backgroundColor: Color(0xFFFEF2),
         body: Container(
-            child: cuerpo()
+            child: Container(
+              child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      nombre(),
+                      SizedBox(height: 50),
+                      campoUsuario(),
+                      campoContrasena(),
+                      SizedBox(height: 50),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                      FlatButton(
+                      color: Color(0xff9d00d1),
+                      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => PrincipalPage())
+                        );
+                      }, child: Text("Enviar", style: TextStyle(fontSize: 20, color: Colors.white),),
+                      shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
+                      ),
+                            SizedBox(width: 60),
+                      FlatButton(
+                      color: Color(0xFFFEF2),
+                      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Inicio())
+                        );
+                      }, child: Text("Cancelar", style: TextStyle(fontSize: 20, color: Color(0xff9d00d1)),),
+                      shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
+                      )
+                          ]
+                      )
+                    ],
+                  )
+              ),
+            )
         )
     );
   }
 }
 
-Widget cuerpo(){
+/*Widget cuerpo(){
   return Container(
     child: Center(
         child: Column(
@@ -43,7 +84,7 @@ Widget cuerpo(){
         )
     ),
   );
-}
+}*/
 
 Widget nombre(){
   return Text("Iniciar sesión", style: TextStyle(color: Color(0xff9d00d1), fontSize: 45.0, fontWeight: FontWeight.w700));
@@ -84,20 +125,20 @@ Widget campoContrasena(){
   );
 }
 
-Widget botonEntrar(){
+/*Widget botonEntrar(){
   return FlatButton(
       color: Color(0xff9d00d1),
       padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
       onPressed: (){}, child: Text("Enviar", style: TextStyle(fontSize: 20, color: Colors.white),),
       shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
   );
-}
+}*/
 
-Widget botonCancelar(){
+/*Widget botonCancelar(){
   return FlatButton(
     color: Color(0xFFFEF2),
     padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
     onPressed: (){}, child: Text("Cancelar", style: TextStyle(fontSize: 20, color: Color(0xff9d00d1)),),
     shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
   );
-}
+}*/
