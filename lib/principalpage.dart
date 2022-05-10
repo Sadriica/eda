@@ -1,3 +1,7 @@
+import 'package:eda/modulo1.dart';
+import 'package:eda/modulo2.dart';
+import 'package:eda/modulo3.dart';
+import 'package:eda/modulo4.dart';
 import 'package:flutter/material.dart';
 
 class PrincipalPage extends StatefulWidget {
@@ -23,24 +27,66 @@ class _PrincipalPageState extends State<PrincipalPage> {
         ),
         backgroundColor: Color(0xFFFEF2),
         body: Container(
-            child: cuerpo()
+            child: Container(
+              child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      textos(),
+                      SizedBox(height: 50),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          FlatButton(
+                              color: Color(0xff9d00d1),
+                              padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => Modulo_1()));
+                              }, child: Text("Módulo 1", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0))
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          FlatButton(
+                              color: Color(0xff9d00d1),
+                              padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => Modulo_2()));
+                              }, child: Text("Módulo 2", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0))
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          FlatButton(
+                              color: Color(0xff9d00d1),
+                              padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => Modulo_3()));
+                              }, child: Text("Módulo 3", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0))
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          FlatButton(
+                              color: Color(0xff9d00d1),
+                              padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => Modulo_4()));
+                              }, child: Text("Módulo 4", style: TextStyle(fontSize: 20, color: Colors.white),),
+                              shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0))
+                          )
+                        ],
+                      )
+                    ],
+                  )
+              ),
+            )
         )
     );
   }
-}
-
-Widget cuerpo(){
-  return Container(
-    child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            textos(),
-            SizedBox(height: 50),
-          ],
-        )
-    ),
-  );
 }
 
 Widget textos(){
