@@ -14,7 +14,6 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
         backgroundColor: Color(0xFFFEF2),
         body: Container(
             child: Container(
@@ -66,33 +65,6 @@ class _RegisterState extends State<Register> {
     );
   }
 }
-
-/*Widget cuerpo(){
-  return Container(
-    child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            nombre(),
-            SizedBox(height: 50),
-            campoNombre(),
-            campoCorreo(),
-            campoContrasena(),
-
-            SizedBox(height: 50),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  botonEntrar(),
-                  SizedBox(width: 60),
-                  botonCancelar()
-                ]
-            )
-          ],
-        )
-    ),
-  );
-}*/
 
 Widget nombre(){
   return Text("Registrarse", style: const TextStyle(color: Color(0xff9d00d1), fontSize: 45.0, fontWeight: FontWeight.w700));
@@ -149,21 +121,3 @@ Widget campoContrasena(){
     ),
   );
 }
-
-/*Widget botonEntrar(){
-  return FlatButton(
-      color: Color(0xff9d00d1),
-      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
-      onPressed: (){}, child: Text("Enviar", style: TextStyle(fontSize: 20, color: Colors.white),),
-      shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
-  );
-}
-
-Widget botonCancelar(){
-  return FlatButton(
-    color: Color(0xFFFEF2),
-    padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
-    onPressed: (){}, child: Text("Cancelar", style: TextStyle(fontSize: 20, color: Color(0xff9d00d1)),),
-    shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
-  );
-} */

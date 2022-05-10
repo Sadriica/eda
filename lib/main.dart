@@ -85,48 +85,6 @@ class _InicioState extends State<Inicio> {
   }
 }
 
-/*Widget cuerpo(){
-  return Container(
-    child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            textos(),
-            SizedBox(height: 50),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  botonIniciarSesion(),
-                  SizedBox(width: 60),
-                  botonRegistrarse()
-                ]
-            )
-          ],
-        )
-    ),
-  );
-}*/
-
-/*Widget botonIniciarSesion(){
-  return FlatButton(
-      color: Color(0xff9d00d1),
-      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
-      onPressed: (){
-        Navigator.push(context, route)
-      }, child: Text("Iniciar sesión", style: TextStyle(fontSize: 20, color: Colors.white),),
-      shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
-  );
-}*/
-
-/*Widget botonRegistrarse(){
-  return FlatButton(
-    color: Color(0xFFFEF2),
-    padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
-    onPressed: (){}, child: Text("Registrarse", style: TextStyle(fontSize: 20, color: Color(0xff9d00d1)),),
-    shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
-  );
-}*/
-
 Widget textos(){
   return Container(
       width: 700,
