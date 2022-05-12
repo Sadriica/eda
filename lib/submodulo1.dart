@@ -1,4 +1,5 @@
 import 'package:eda/modulo1.dart';
+import 'package:eda/modulo2.dart';
 import 'package:flutter/material.dart';
 import 'package:eda/principalpage.dart';
 
@@ -17,7 +18,8 @@ class _SubMod_1 extends State<SubMod_1> {
           backgroundColor: Colors.purple,
           title: Center(
               child: Text("Empezar la prevención y la solución de problemas")
-          )
+          ),
+        automaticallyImplyLeading: false,
       ),
       backgroundColor: Color(0xFFFEF2),
       body: Container(
@@ -35,12 +37,8 @@ class _SubMod_1 extends State<SubMod_1> {
                                   color: Color(0xff9d00d1),
                                   padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
                                   onPressed: (){
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => PrincipalPage()
-                                        )
-                                    );
-                                  }, child: Text("Términar módulo", style: TextStyle(fontSize: 20, color: Colors.white)),
+                                    mostrarAlerta(context);
+                                    }, child: Text("Términar módulo", style: TextStyle(fontSize: 20, color: Colors.white)),
                                   shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
                               ),
                               SizedBox(width: 60),
@@ -52,8 +50,8 @@ class _SubMod_1 extends State<SubMod_1> {
                                       context,
                                       MaterialPageRoute(builder: (context) => Modulo_1()
                                       )
-                                  );
-                                }, child: Text("Volver al módulo", style: TextStyle(fontSize: 20, color: Colors.white),),
+                                    );
+                                  }, child: Text("Volver al módulo", style: TextStyle(fontSize: 20, color: Colors.white),),
                                 shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
                               ),
                               SizedBox(
@@ -61,14 +59,6 @@ class _SubMod_1 extends State<SubMod_1> {
                               )
                             ]
                         )
-                        /*FlatButton(
-                            onPressed: (){
-                              Navigator.push(
-                                  context, MaterialPageRoute(builder: (context) => SubMod_1)
-                              );
-                            },
-                            child: child
-                        )*/
                       ],
                     )
                 ),
@@ -99,4 +89,23 @@ class _SubMod_1 extends State<SubMod_1> {
       ],
     );
   }
+}
+
+void mostrarAlerta(BuildContext context){
+  showDialog(
+    barrierDismissible: false, //Permite que no se salga apretando en cualquier lugar fuera del recuadro
+    context: context,
+    builder:(_) => new AlertDialog(
+        title: Text("¡Haz completado el primer módulo!"),
+        content: Text("¡Enhorabuena! Felicidades, haz finalizado exitosamente este módulo."),
+        actions: [
+          TextButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => PrincipalPage()));
+          }, child: Text("Salir")),
+          TextButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Modulo_2()));
+            }, child: Text("Pasar al siguiente"))
+        ]
+    )
+  );
 }

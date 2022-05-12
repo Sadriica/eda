@@ -16,7 +16,8 @@ class _Modulo_2 extends State<Modulo_2> {
           backgroundColor: Colors.purple,
           title: Center(
               child: Text("Manejo del tiempo y ser eficiente")
-          )
+          ),
+        automaticallyImplyLeading: false,
       ),
       backgroundColor: Color(0xFFFEF2),
       body: Container(

@@ -17,7 +17,8 @@ class _SubMod_4 extends State<SubMod_4> {
           backgroundColor: Colors.purple,
           title: Center(
               child: Text("Métodos de búsqueda e investigación")
-          )
+          ),
+        automaticallyImplyLeading: false,
       ),
       backgroundColor: Color(0xFFFEF2),
       body: Container(
@@ -36,11 +37,7 @@ class _SubMod_4 extends State<SubMod_4> {
                                 color: Color(0xff9d00d1),
                                 padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
                                 onPressed: (){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => PrincipalPage()
-                                      )
-                                  );
+                                  mostrarAlerta(context);
                                 }, child: Text("Términar módulo", style: TextStyle(fontSize: 20, color: Colors.white)),
                                 shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
                             ),
@@ -92,4 +89,20 @@ class _SubMod_4 extends State<SubMod_4> {
       ],
     );
   }
+}
+
+void mostrarAlerta(BuildContext context){
+  showDialog(
+      barrierDismissible: false, //Permite que no se salga apretando en cualquier lugar fuera del recuadro
+      context: context,
+      builder:(_) => new AlertDialog(
+          title: Text("¡Haz completado el cuarto módulo!"),
+          content: Text("¡Enhorabuena! Felicidades, haz finalizado exitosamente este módulo."),
+          actions: [
+            TextButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => PrincipalPage()));
+            }, child: Text("Salir")),
+          ]
+      )
+  );
 }

@@ -24,6 +24,7 @@ class _PrincipalPageState extends State<PrincipalPage> {
               height: 100,
             ),
           ),
+          automaticallyImplyLeading: false,
         ),
         backgroundColor: Color(0xFFFEF2),
         body: Container(

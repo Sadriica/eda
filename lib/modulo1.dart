@@ -16,7 +16,8 @@ class _Modulo_1 extends State<Modulo_1> {
           backgroundColor: Colors.purple,
           title: Center(
               child: Text("Empezar la prevención y la solución de problemas")
-          )
+          ),
+        automaticallyImplyLeading: false,
       ),
       backgroundColor: Color(0xFFFEF2),
       body: Container(

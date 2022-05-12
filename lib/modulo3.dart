@@ -16,7 +16,8 @@ class _Modulo_3 extends State<Modulo_3> {
           backgroundColor: Colors.purple,
           title: Center(
               child: Text("Técnicas de estudio")
-          )
+          ),
+        automaticallyImplyLeading: false,
       ),
       backgroundColor: Color(0xFFFEF2),
       body: Container(

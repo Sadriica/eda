@@ -16,7 +16,8 @@ class _Modulo_4 extends State<Modulo_4> {
           backgroundColor: Colors.purple,
           title: Center(
               child: Text("Métodos de búsqueda e investigación")
-          )
+          ),
+        automaticallyImplyLeading: false,
       ),
       backgroundColor: Color(0xFFFEF2),
       body: Container(
