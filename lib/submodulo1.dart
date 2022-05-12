@@ -1,4 +1,6 @@
+import 'package:eda/modulo1.dart';
 import 'package:flutter/material.dart';
+import 'package:eda/principalpage.dart';
 
 class SubMod_1 extends StatefulWidget {
   SubMod_1({Key? key}) : super(key: key);
@@ -26,7 +28,39 @@ class _SubMod_1 extends State<SubMod_1> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         textos(),
-                        SizedBox(height: 50),
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              FlatButton(
+                                  color: Color(0xff9d00d1),
+                                  padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                                  onPressed: (){
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => PrincipalPage()
+                                        )
+                                    );
+                                  }, child: Text("Términar módulo", style: TextStyle(fontSize: 20, color: Colors.white)),
+                                  shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
+                              ),
+                              SizedBox(width: 60),
+                              FlatButton(
+                                color: Color(0xff9d00d1),
+                                padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                                onPressed: (){
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => Modulo_1()
+                                      )
+                                  );
+                                }, child: Text("Volver al módulo", style: TextStyle(fontSize: 20, color: Colors.white),),
+                                shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
+                              ),
+                              SizedBox(
+                                height: 300,
+                              )
+                            ]
+                        )
                         /*FlatButton(
                             onPressed: (){
                               Navigator.push(

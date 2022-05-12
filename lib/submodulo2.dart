@@ -1,4 +1,6 @@
+import 'package:eda/principalpage.dart';
 import 'package:flutter/material.dart';
+import 'package:eda/modulo2.dart';
 
 class SubMod_2 extends StatefulWidget {
   SubMod_2({Key? key}) : super(key: key);
@@ -26,18 +28,42 @@ class _SubMod_2 extends State<SubMod_2> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         textos(),
-                        SizedBox(height: 50),
-                        /*FlatButton(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        FlatButton(
+                            color: Color(0xff9d00d1),
+                            padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
                             onPressed: (){
                               Navigator.push(
-                                  context, MaterialPageRoute(builder: (context) => SubMod_1)
+                                  context,
+                                  MaterialPageRoute(builder: (context) => PrincipalPage()
+                                  )
                               );
-                            },
-                            child: child
-                        )*/
-                      ],
-                    )
-                ),
+                            }, child: Text("Términar módulo", style: TextStyle(fontSize: 20, color: Colors.white)),
+                            shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
+                        ),
+                        SizedBox(width: 60),
+                        FlatButton(
+                          color: Color(0xff9d00d1),
+                          padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
+                          onPressed: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Modulo_2()
+                                )
+                            );
+                          }, child: Text("Volver al módulo", style: TextStyle(fontSize: 20, color: Colors.white),),
+                          shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xff9d00d1)), borderRadius: BorderRadius.circular(30.0)),
+                        ),
+                        SizedBox(
+                          height: 200,
+                        )
+                        ],
+                      )
+                    ]
+                  ),
+                )
               ]
           )
       ),
