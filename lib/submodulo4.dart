@@ -93,7 +93,7 @@ class _SubMod_4 extends State<SubMod_4> {
 
 void mostrarAlerta(BuildContext context){
   showDialog(
-      barrierDismissible: false, //Permite que no se salga apretando en cualquier lugar fuera del recuadro
+      barrierDismissible: true, //Permite que no se salga apretando en cualquier lugar fuera del recuadro
       context: context,
       builder:(_) => new AlertDialog(
           title: Text("¡Haz completado el cuarto módulo!"),

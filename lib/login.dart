@@ -19,7 +19,20 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title:Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              BackButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                color: Colors.purple,),
+              ]
+          )
 
+          ),
         backgroundColor: Color(0xFFFEF2),
         body: Container(
             child: Container(
@@ -45,14 +58,19 @@ class _LoginState extends State<Login> {
                         print(widget.contrasenita);
                         print(correo.text);
                         print(contrasena.text);
+
+                        String name = widget.nombresito;
+                        String correoo = widget.correito;
+                        String contrasenaa = widget.contrasenita;
+
                         correo.toString();
                         contrasena.toString();
 
                         if( widget.correito == correo.text && widget.contrasenita == contrasena.text){
                           Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => PrincipalPage())
-                          );
+                              MaterialPageRoute(builder: (context) => PrincipalPage()
+                          ));
                       } else {
                         _mostrarAlerta(context);
                         }

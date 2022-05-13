@@ -111,21 +111,24 @@ class _RegisterState extends State<Register> {
     password = pass.text;
 
     showDialog(
-        barrierDismissible: false, //Permite que no se salga apretando en cualquier lugar fuera del recuadro
+        barrierDismissible: true, //Permite que no se salga apretando en cualquier lugar fuera del recuadro
         context: context,
         builder:(_) => new AlertDialog(
             title: Text("Registro completado"),
-            content: Text("Felicidades, te haz registrado correctamente"),
+            content: Text("¡Felicidades, te haz registrado correctamente! \n Te invitamos a realizar la prueba diagnostico" ) ,
             actions: [
+
               TextButton(onPressed: (){
+                TextStyle(fontSize: 20, color: Color(0xff9d00d1));
                 launchUrlString("https://forms.gle/66ptB39HScunUfSw9");
 
               }, child: Text("Realizar evaluación diagnóstica")),
-              TextButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Login(name, mail, password)));
+              /*TextButton(onPressed: (){
+    TextStyle(fontSize: 20, color: Color(0xff9d00d1));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Login(name, mail, password)));
               }, child: Text("Salir"))
-            ]
-        )
+    })] */
+        ])
     );
   }
 

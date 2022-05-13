@@ -79,7 +79,7 @@ class _InicioState extends State<Inicio> {
 
                               print("name: " + name + "..." );
                               print("mail: " + mail + "...");
-                              print("password" + password + "...");
+                              print("password: " + password + "...");
 
 
                             Navigator.push(

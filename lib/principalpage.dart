@@ -1,3 +1,4 @@
+import 'package:eda/main.dart';
 import 'package:eda/modulo1.dart';
 import 'package:eda/modulo2.dart';
 import 'package:eda/modulo3.dart';
@@ -5,6 +6,7 @@ import 'package:eda/modulo4.dart';
 import 'package:flutter/material.dart';
 
 class PrincipalPage extends StatefulWidget {
+
   PrincipalPage({Key? key}) : super(key: key);
 
   @override
@@ -12,17 +14,42 @@ class PrincipalPage extends StatefulWidget {
 }
 
 class _PrincipalPageState extends State<PrincipalPage> {
+
   @override
+
+
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.purple,
-          title: const Center (
-            child: Image(
-              image: AssetImage("../Img/EDA2.png"),
-              width: 100,
-              height: 100,
-            ),
+          title: Row (
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget> [
+              BackButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                color: Colors.white,),
+              Center(
+                child: Image(
+                  image: AssetImage("../Img/EDA2.png"),
+                  width: 100,
+                  height: 100,
+                ),
+              ),
+              SizedBox(width: 1000,),
+              TextButton(
+                  onPressed: (){
+
+                    String name = "z";
+                    String mail = "z";
+                    String pass = "z";
+
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Inicio(name,mail,pass)));
+                  }
+                  , child: Icon(Icons.power_settings_new, color: Colors.white,)
+              )
+            ],
           ),
           automaticallyImplyLeading: false,
         ),
