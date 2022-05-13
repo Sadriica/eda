@@ -2,33 +2,49 @@ import 'package:eda/login.dart';
 import 'package:flutter/material.dart';
 import 'package:eda/Register.dart';
 
+
+
 void main() {
   runApp(MiApp());
 }
 
+
 class MiApp extends StatelessWidget {
+
   const MiApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
+    const String nombresito = "a";
+    const  String correito = "a";
+    const String contrasenita = "a";
+
     return MaterialApp(
+
       debugShowCheckedModeBanner: false,
       title: "EDA",
-      home: Inicio(),
+      home: Inicio(nombresito, correito, contrasenita),
     );
   }
 }
 
 class Inicio extends StatefulWidget {
-  Inicio({Key? key}) : super(key: key);
+
+  final String nombresito;
+  final  String correito;
+  final String contrasenita;
+
+  Inicio(this.nombresito, this.correito, this.contrasenita,{Key? key}) : super(key: key);
 
   @override
   _InicioState createState() => _InicioState();
 }
 
 class _InicioState extends State<Inicio> {
+
   @override
-  Widget build(BuildContext context) {
+    Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.purple,
@@ -56,9 +72,19 @@ class _InicioState extends State<Inicio> {
                             color: Color(0xff9d00d1),
                             padding: EdgeInsets.symmetric(horizontal: 55, vertical: 25),
                             onPressed: (){
+
+                              String name = widget.nombresito;
+                              String mail = widget.correito;
+                              String password = widget.contrasenita;
+
+                              print("name: " + name + "..." );
+                              print("mail: " + mail + "...");
+                              print("password" + password + "...");
+
+
                             Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => Login())
+                                MaterialPageRoute(builder: (context) => Login(name,mail,password))
                             );}, child: Text("Iniciar sesión", style: TextStyle(fontSize: 20, color: Colors.white),),
                             shape: RoundedRectangleBorder(side: BorderSide(color: Color(0xFFFEF2)), borderRadius: BorderRadius.circular(30.0))
                             ),
